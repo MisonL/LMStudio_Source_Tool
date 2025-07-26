@@ -11,6 +11,12 @@ echo 步骤2: 创建发布目录结构
 mkdir release
 mkdir release\icons
 
+echo 步骤2.1: 生成图标文件
+python create_icon.py
+
+echo 步骤2.2: 复制图标文件
+copy icons\app.ico release\icons\icon.ico
+
 echo 步骤3: 复制可执行文件
 copy "dist\LMStudio_Source_Tool.exe" "release\LMStudio_Source_Tool.exe"
 
